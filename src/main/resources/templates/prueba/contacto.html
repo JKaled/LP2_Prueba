@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img class="" th:src="@{/images/alumno.png}" width="250px" height="250px">
+			</div>
+			<div class="col-md-6">
+				<div class="table-responsive">
+					<table class="table table-bordered table-dark">
+						<thead>
+							<tr>
+								<th>Codigo</th>
+								<th>Nombre</th>
+								<th>Apellido</th>
+								<th>Carrera</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td th:text="${p_codigo}"></td>
+								<td th:text="${p_nombre}"></td>
+								<td th:text="${p_apellido}"></td>
+								<td th:text="${p_carrera}"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script th:src="@{/js/jquery.slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</html>

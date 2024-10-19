@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+
+	<div class="container">
+		<h3>Deseas eliminar el registro ?</h3>
+		
+		<form method="post" th:object="${alumno}" th:action="@{/alumno/eliminar}">
+			<div class="form-group">
+				<label for="txtCodigo">Codigo</label>
+				<input th:field="*{codigo}" type="text" class="form-control" id="txtCodigo" readonly="true" >
+			</div>
+			<div class="form-group">
+				<label for="txtNombre">Nombre</label>
+				<input th:field="*{nombre}" type="text" class="form-control" id="txtNombre" readonly="true" >
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Apellido</label>
+				<input th:field="*{apellido}" type="text" class="form-control" id="txtApellido" readonly="true" >
+			</div>
+			<div class="form-group">
+				<label for="txtDocumento">Documento</label>
+				<input th:field="*{documento}" type="text" class="form-control" id="txtDocumento" readonly="true" >
+			</div>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+
+
+
+
+</body>
+
+</html>

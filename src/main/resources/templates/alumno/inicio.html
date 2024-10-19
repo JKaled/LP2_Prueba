@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+	
+	
+
+	<div class="container mt-4">
+		
+		<a th:href="@{/alumno/crear}" class="btn btn-primary">Crear Alumno</a>
+		
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Codigo</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellido</th>
+					<th scope="col">Documento</th>
+					<th scope="col">Opciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="fila:${listaAlumno}">
+					<td th:text="${fila.codigo}"></td>
+					<td th:text="${fila.nombre}"></td>
+					<td th:text="${fila.apellido}"></td>
+					<td th:text="${fila.documento}"></td>
+					<td>
+						<a th:href="@{/alumno/editar/{codigo} (codigo=${fila.codigo}) }"
+							class="btn btn-warning btn-sm">Editar</a>
+						<a th:href="@{/alumno/eliminar/{codigo} (codigo=${fila.codigo}) }"
+							class="btn btn-danger btn-sm">Eliminar</a>
+					</td>
+				</tr>
+				
+			</tbody>
+		</table>
+
+	</div>
+
+
+</body>
+
+</html>

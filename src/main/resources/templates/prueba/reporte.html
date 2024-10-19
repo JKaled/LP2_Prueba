@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	
+</head>
+<body>
+	<div class="container">
+		<table class="table table-dark">
+			  <thead>
+			    <tr>
+			      <th scope="col">Codigo Estudiante</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Apellido</th>
+				  <th scope="col">Carrera</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+				  <tr th:each="reg:${listaEstudiante}">
+						<td th:text="${reg.codigoEstudiante}"></td>
+						<td th:text="${reg.nombre}"></td>
+						<td th:text="${reg.apellido}"></td>
+						<td th:text="${reg.carrera}"></td>
+				  </tr>  
+			  </tbody>
+			</table>
+	</div>
+	
+</body>
+</html>

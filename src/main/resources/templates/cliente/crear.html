@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+	<h1>Registro de Cliente</h1>
+
+	<div class="container">
+
+		<form>
+			<div class="form-group">
+				<label for="txtCodigo">Codigo</label>
+				<input  type="text" class="form-control" id="txtCodigo" value="0">
+			</div>
+			<div class="form-group">
+				<label for="txtNombre">Nombre</label>
+				<input  type="text" class="form-control" id="txtNombre">
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Apellido Paterno</label>
+				<input  type="text" class="form-control" id="txtApellido">
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Apellido Materno</label>
+				<input  type="text" class="form-control" id="txtApellido">
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Documento</label>
+				<input type="text" class="form-control" id="txtApellido">
+			</div>
+			<select>
+				<option value="1">Lima</option>
+				<option value="2">Trujillo</option>
+			</select>
+
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+
+
+</body>
+<script th:src="@{/js/jquery.slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</html>

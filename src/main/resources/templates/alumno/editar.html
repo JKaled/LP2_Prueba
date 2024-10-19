@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+
+	<div class="container">
+		<form method="post" th:object="${alumno}" th:action="@{/alumno/crear}">
+			<div class="form-group">
+				<label for="txtCodigo">Codigo</label>
+				<input th:field="*{codigo}" type="text" class="form-control" id="txtCodigo" >
+			</div>
+			<div class="form-group">
+				<label for="txtNombre">Nombre</label>
+				<input th:field="*{nombre}" type="text" class="form-control" id="txtNombre">
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Apellido</label>
+				<input th:field="*{apellido}" type="text" class="form-control" id="txtApellido" >
+			</div>
+			<div class="form-group">
+				<label for="txtDocumento">Documento</label>
+				<input th:field="*{documento}" type="text" class="form-control" id="txtDocumento">
+			</div>
+			<button type="submit" class="btn btn-primary">Guardar</button>
+		</form>
+	</div>
+
+
+
+
+</body>
+
+</html>

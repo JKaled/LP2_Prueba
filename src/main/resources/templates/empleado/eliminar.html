@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inicio</title>
+</head>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+
+<body>
+	<h1>Deseas eliminar?</h1>
+
+	<div class="container">
+		<form th:object="${empleado}" method="post" th:action="@{/empleado/eliminar}">
+			<div class="form-group">
+				<label for="txtCodigo">Codigo</label>
+				<input th:field="*{codigo}" type="text" class="form-control" id="txtCodigo" value="0" >
+			</div>
+			<div class="form-group">
+				<label for="txtNombre">Nombre</label>
+				<input th:field="*{nombre}" type="text" class="form-control" id="txtNombre">
+			</div>
+			<div class="form-group">
+				<label for="txtApellido">Apellido</label>
+				<input th:field="*{apellido}" type="text" class="form-control" id="txtApellido">
+			</div>
+			<button type="submit" class="btn btn-primary">Eliminar</button>
+		</form>
+	</div>
+
+
+</body>
+<script th:src="@{/js/jquery.slim.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+
+</html>
